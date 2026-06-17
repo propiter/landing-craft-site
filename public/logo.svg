@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 60" fill="none">
+  <defs>
+    <linearGradient id="logoGradient" x1="0" y1="0" x2="0" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#E6A03A"/>
+      <stop offset="100%" stop-color="#C5603A"/>
+    </linearGradient>
+  </defs>
+  <!-- P mark — hand-crafted continuous line initial -->
+  <path d="M10 50V10c0-4 3-8 6-4l10 22 10-22c3-4 6 0 6 4v40" 
+        stroke="url(#logoGradient)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- craft-line ornament under the mark -->
+  <path d="M8 54c12-6 24-6 30 0" stroke="url(#logoGradient)" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+  
+  <!-- Wordmark -->
+  <text x="60" y="40" font-family="'Playfair Display', Georgia, serif" font-size="24" font-weight="600" fill="#F2ECE0" letter-spacing="-0.5">Landing Craft</text>
+</svg>

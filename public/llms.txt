@@ -1,0 +1,25 @@
+# Landing Craft
+A concierge landing service — human-researched, real Next.js code, deployed and working.
+Built by propiter. First landing free.
+
+## Pages
+- /: Stop prompting. Start launching. (Home — full pitch, AI Graveyard comparison, pricing teaser)
+- /how-it-works: From your idea to a live landing. No prompting required. (3-step concierge process)
+- /why-not-ai: AI builders can't do taste. Here's why. (Evidence, anatomy of AI slop, craft principles)
+- /showcase: Real landings, built with Landing Craft. (Filterable gallery of delivered projects)
+- /pricing: One price for your first landing: $0. (Free / Credits / Pro tiers)
+- /faq: Every question, honestly answered. (Grouped by Quality, Ownership, Process, Practical, Legal)
+- /terms: Terms of Service
+- /privacy: Privacy Policy
+
+## API
+- POST /api/contact: Submit your product for a free landing. Fields: name, email, productName, productUrl, whatBuilding, whatNeed, showcaseConsent.
+
+## Key facts
+- NOT an AI builder — positioned AGAINST Lovable, v0, Bolt, Durable
+- Real Next.js code in YOUR GitHub repo (no lock-in)
+- Market research before design (competitor teardown, keyword mining, audience profiling)
+- Deployed on Vercel (your-product.vercel.app)
+- Forms work. Analytics wired. SEO is real.
+- Maker: propiter (github.com/propiter)
+- First landing: $0. No credit card. No trial expiration.

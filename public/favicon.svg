@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <defs>
+    <linearGradient id="favGradient" x1="8" y1="8" x2="24" y2="24">
+      <stop offset="0%" stop-color="#E6A03A"/>
+      <stop offset="100%" stop-color="#C5603A"/>
+    </linearGradient>
+  </defs>
+  <!-- P mark on warm-dark square background -->
+  <rect width="32" height="32" rx="6" fill="#171613"/>
+  <path d="M8 24V8c0-2.5 2-5 4-2.5l6 12 6-12c2-2.5 4 0 4 2.5v16" 
+        stroke="url(#favGradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
