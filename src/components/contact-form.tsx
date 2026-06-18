@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useState, useEffect, FormEvent } from "react";
 import { SubmitButton } from "./cta-button";
 import { trackConversion } from "@/components/analytics";
 
@@ -17,7 +17,13 @@ interface ContactFormData {
 
 type FormStatus = "idle" | "loading" | "success" | "error";
 
+function getCtaSource(): string {
+  if (typeof window === "undefined") return "direct";
+  return sessionStorage.getItem("ctaSource") || "direct";
+}
+
 export default function ContactForm({ id }: { id?: string }) {
+  const [ctaSource, setCtaSource] = useState("direct");
   const [status, setStatus] = useState<FormStatus>("idle");
   const [errorMessage, setErrorMessage] = useState("");
   const [formData, setFormData] = useState<ContactFormData>({
@@ -32,6 +38,20 @@ export default function ContactForm({ id }: { id?: string }) {
   });
 
   const [errors, setErrors] = useState<Partial<Record<keyof ContactFormData, string>>>({});
+
+  useEffect(() => {
+    setCtaSource(getCtaSource());
+    const handler = (e: MouseEvent) => {
+      const link = (e.target as HTMLElement).closest('a[href*="#contact-form"]');
+      if (link) {
+        const text = link.textContent?.trim() || "unknown";
+        sessionStorage.setItem("ctaSource", text);
+        setCtaSource(text);
+      }
+    };
+    document.addEventListener("click", handler);
+    return () => document.removeEventListener("click", handler);
+  }, []);
 
   function validate(): boolean {
     const newErrors: Partial<Record<keyof ContactFormData, string>> = {};
@@ -100,6 +120,7 @@ export default function ContactForm({ id }: { id?: string }) {
           whatBuilding: formData.whatBuilding,
           whatNeed: formData.whatNeed,
           showcaseConsent: formData.showcaseConsent,
+          ctaSource: ctaSource,
         }),
       });
 

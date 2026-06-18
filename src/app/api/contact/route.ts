@@ -6,7 +6,7 @@ export async function POST(request: NextRequest) {
 
     // === Server-side validation ===
 
-    const { name, email, productName, productUrl, whatBuilding, whatNeed, showcaseConsent } = body;
+    const { name, email, productName, productUrl, whatBuilding, whatNeed, showcaseConsent, ctaSource } = body;
 
     const errors: string[] = [];
 
@@ -75,6 +75,7 @@ export async function POST(request: NextRequest) {
           whatBuilding: whatBuilding.trim(),
           whatNeed: whatNeed.trim(),
           showcaseConsent: !!showcaseConsent,
+          ctaSource: ctaSource || "unknown",
           submittedAt: new Date().toISOString(),
           source: "landing-craft-website",
           ip: ip,
