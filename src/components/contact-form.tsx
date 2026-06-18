@@ -2,7 +2,7 @@
 
 import { useState, useEffect, FormEvent } from "react";
 import { SubmitButton } from "./cta-button";
-import { trackConversion } from "@/components/analytics";
+import { trackConversion } from "@/lib/analytics";
 
 interface ContactFormData {
   name: string;
