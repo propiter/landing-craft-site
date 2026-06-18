@@ -90,7 +90,7 @@ export const faqGroups: FAQGroup[] = [
       {
         question: "Can I use my own domain?",
         answer:
-          "Yes, with the Pro plan ($499). I'll set up your custom domain on Vercel — DNS configuration, SSL, the works. If you're technical and want to do it yourself, the code is yours, so you can deploy to your own Vercel account on any domain you own.",
+          "Yes, with the Pro plan ($49). I'll set up your custom domain on Vercel — DNS configuration, SSL, the works. If you're technical and want to do it yourself, the code is yours, so you can deploy to your own Vercel account on any domain you own.",
       },
       {
         question: "Do the forms really work?",
