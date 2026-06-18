@@ -3,7 +3,7 @@ import { Playfair_Display, DM_Sans, JetBrains_Mono } from "next/font/google";
 import Header from "@/components/nav";
 import Footer from "@/components/footer";
 import LenisProvider from "@/components/lenis-provider";
-import Analytics from "@/components/analytics";
+import GoogleAnalytics from "@/components/google-analytics";
 import CookieBanner from "@/components/cookie-banner";
 import { siteConfig } from "@/lib/site-config";
 import "./globals.css";
@@ -128,7 +128,7 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <Footer />
         </LenisProvider>
-        <Analytics />
+        <GoogleAnalytics />
         <CookieBanner />
       </body>
     </html>
