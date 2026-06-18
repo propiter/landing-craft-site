@@ -7,12 +7,14 @@ export interface NavLink {
 export const navLinks: NavLink[] = [
   { label: "Showcase", href: "/showcase" },
   { label: "How it works", href: "/how-it-works" },
+  { label: "Blog", href: "/blog" },
   { label: "Pricing", href: "/pricing" },
 ];
 
 export const footerNavLinks: NavLink[] = [
   { label: "Showcase", href: "/showcase" },
   { label: "How it works", href: "/how-it-works" },
+  { label: "Blog", href: "/blog" },
   { label: "Pricing", href: "/pricing" },
   { label: "FAQ", href: "/faq" },
 ];

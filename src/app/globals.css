@@ -207,3 +207,13 @@ body {
   background-color: rgb(230 160 58 / 0.3);
   color: var(--color-ink);
 }
+
+/* Blog prose — ensures list markers and link underlines display correctly */
+.prose-custom ul,
+.prose-custom ol {
+  list-style-position: outside;
+}
+
+.prose-custom li::marker {
+  color: var(--color-brand, #E6A03A);
+}
